@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>RAM</title>
+</head>
+<body align="center">
+    <h1>HEAET ATTACK PREDICTION</h1>
+    <form action="{{url_for('predict')}}"method="POST">
+        <input type="text" name="age" placeholder="Age" required="required"/><br>
+        <input type="radio" name="sex" required="required" value="1"/>Male
+        <input type="radio" name="sex" required="required" value="0"/>Female<br>
+        <h5>Chest pain</h5>
+        <input type="radio" name="cp" required="required" value="0"/>no pain
+        <input type="radio" name="cp" required="required" value="1"/>normal
+        <input type="radio" name="cp" required="required" value="2"/>medium
+        <input type="radio" name="cp" required="required" value="3"/>High<br>
+        <input type="text" name="bp" placeholder="BP" required="required"/><br>
+        <input type="text" name="chol" placeholder="colestral" required="required"/><br>
+        <input type="radio" name="sug" required="required" value="0"/>low sugar
+        <input type="radio" name="sug" required="required" value="1"/>High sugar<br>
+        <input type="text" name="h_rate" placeholder="Heart_rate" required="required"/><br>
+        <input type="radio" name="exc" required="required" value="0"/>no walking
+        <input type="radio" name="exc" required="required" value="1"/>walking<br><br>
+        <button type="submit">calcualte</button>
+    </form>
+    <br>
+    {{prediction_text}}
+</body>
+</html>
